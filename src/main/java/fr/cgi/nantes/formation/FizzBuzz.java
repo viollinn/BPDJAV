@@ -13,23 +13,12 @@ public class FizzBuzz
             
             i++;
 
-            if (((i % 3) == 0) && ((i % 5) == 0)){
-            
-                System.out.println("FizzBuzz");
-    
-            }else if ((i % 3) == 0){
-    
-                System.out.println("Fizz");
-    
-            }else if ((i % 5) == 0){
-    
-                System.out.println("Buzz");
-    
-            }else{
-    
-                System.out.println(i);
-    
-            }
+            String out = ((((i % 3) == 0) && ((i % 5) == 0)) ? 
+                "FizzBuzz" : ((i % 3) == 0) ? 
+                    "Fizz" : ((i % 5) == 0) ? 
+                    "Buzz" : String.valueOf(i));
+
+            System.out.println(out);
 
         } while (i < 100);
 
