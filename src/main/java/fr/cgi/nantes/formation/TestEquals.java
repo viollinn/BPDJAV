@@ -8,16 +8,14 @@ public class TestEquals{
 
   public static void main( String[] args ){
         
-    Integer i = Integer.valueOf(42);
-    String valeur = "42";
-    if (i.equals(valeur)) {
-      
-      System.out.println("Dans le traitement puisque identique");
+    MonObjet obj1 = new MonObjet("age", 25);
+    MonObjet obj2 = new MonObjet("age", 25);
 
-    }else{
+    System.out.println("obj1 == obj2: " + (obj1 == obj2));
+    System.out.println("obj1.equals(obj2): " + obj1.equals(obj2));
 
-      System.out.println("Pas dans le traitement puisque différent");
-    }
-
+    obj2 = obj1;
+    System.out.println("obj1 == obj2: " + (obj1 == obj2));
+    System.out.println("obj1.equals(obj2): " + obj1.equals(obj2));
   }
 }
