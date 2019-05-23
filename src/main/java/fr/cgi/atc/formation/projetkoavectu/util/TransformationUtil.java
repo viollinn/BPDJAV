@@ -2,7 +2,7 @@
  * ECM BTB - Equipe ECM - CGI 2015
  * 
  */
-package fr.cgi.atc.formation.projetkosanstu.util;
+package fr.cgi.atc.formation.projetkoavectu.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -93,7 +93,7 @@ public final class TransformationUtil {
 
 		if (chaine != null) {
 
-			StringBuffer sb = new StringBuffer();
+			StringBuilder sb = new StringBuilder();
 			char[] caracteres = chaine.toCharArray();
 			char caractere;
 
@@ -141,13 +141,13 @@ public final class TransformationUtil {
 
 		String retour = null;
 
-		if ((chaine != null)) {
+		if (chaine != null) {
 
 			retour = chaine;
 
 			if (authorizedChars != null) {
 
-				StringBuffer sb = new StringBuffer();
+				StringBuilder sb = new StringBuilder();
 
 				for (int i = 0; i < chaine.length(); i = i + 1) {
 

@@ -2,21 +2,21 @@
  * ECM BTB - Equipe ECM - CGI 2015
  * 
  */
-package fr.cgi.atc.formation.projetkosanstu;
+package fr.cgi.atc.formation.projetkoavectu;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.cgi.atc.formation.projetkosanstu.util.TransformationUtil;
+import fr.cgi.atc.formation.projetkoavectu.util.TransformationUtil;
 
 /**
- * ProjetKOSansTU.java DOCUMENTEZ_MOI
+ * ProjetKOAvecTU.java DOCUMENTEZ_MOI
  * 
  * @author viollinn Date: 30 oct. 2015
  */
-public class ProjetKOSansTU {
+public class ProjetKOAvecTU {
 
-	private static final Logger LOG = LoggerFactory.getLogger(ProjetKOSansTU.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ProjetKOAvecTU.class);
 
 	/**
 	 * 
@@ -26,7 +26,7 @@ public class ProjetKOSansTU {
 	 */
 	public static void main(String args[]) {
 
-		ProjetKOSansTU simpleTuProject = new ProjetKOSansTU();
+		ProjetKOAvecTU simpleTuProject = new ProjetKOAvecTU();
 		simpleTuProject.traitement();
 	}
 
@@ -39,13 +39,21 @@ public class ProjetKOSansTU {
 
 		String authorizedChars = "acegikmoqsuwy";
 		String chaineATraiter = "abcdewfsghijklmanohpqjrstufbvwxnpyz";
+
 		String chaineFiltree = null;
 		String chaineTransformee = null;
 		String md5 = null;
 
 		chaineATraiter = TransformationUtil.reverse(chaineATraiter);
+
 		chaineFiltree = TransformationUtil.getAuthorizedCaracters(chaineATraiter, authorizedChars);
+
+		// System.out.println("Attendu: " + StringUtils.reverse("acewsgikmaoqsuwy") + ", reçu: " + chaineFiltree);
+
 		chaineTransformee = TransformationUtil.transformerChaine(chaineFiltree);
+
+		// System.out.println("Attendu: ECA, reçu: " + chaineTransformee);
+
 		md5 = TransformationUtil.getMD5(chaineTransformee);
 
 		LOG.debug("Attendu 3188eeadc0ee2c352e957523739d5d7b, obtenu " + md5);
