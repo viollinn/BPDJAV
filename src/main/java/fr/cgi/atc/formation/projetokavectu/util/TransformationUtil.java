@@ -2,7 +2,7 @@
  * ECM BTB - Equipe ECM - CGI 2015
  * 
  */
-package fr.cgi.atc.formation.projetkoavectu.util;
+package fr.cgi.atc.formation.projetokavectu.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -33,6 +33,8 @@ public final class TransformationUtil {
 		String reverted = null;
 
 		if (chaine != null) {
+
+			reverted = "";
 
 			for (int i = 0; i < chaine.length(); i++) {
 
@@ -93,7 +95,7 @@ public final class TransformationUtil {
 
 		if (chaine != null) {
 
-			StringBuilder sb = new StringBuilder();
+			StringBuffer sb = new StringBuffer();
 			char[] caracteres = chaine.toCharArray();
 			char caractere;
 
@@ -103,11 +105,10 @@ public final class TransformationUtil {
 
 				caractere = minToMaj(caractere);
 
-				sb.append((int) caracteres[i]);
+				sb.append((int) caractere);
 				if (i + 1 < caracteres.length) {
 					sb.append("-");
 				}
-				i++;
 			}
 
 			retour = sb.toString();
@@ -141,21 +142,21 @@ public final class TransformationUtil {
 
 		String retour = null;
 
-		if (chaine != null) {
+		if ((chaine != null)) {
 
 			retour = chaine;
 
 			if (authorizedChars != null) {
 
-				StringBuilder sb = new StringBuilder();
+				StringBuffer sb = new StringBuffer();
 
-				for (int i = 0; i < chaine.length(); i = i + 1) {
+				for (int i = 0; i < chaine.length(); i++) {
 
 					for (int j = 0; j < authorizedChars.length(); j++) {
 
-						if (chaine.charAt(j) == authorizedChars.charAt(j)) {
+						if (chaine.charAt(i) == authorizedChars.charAt(j)) {
 
-							sb.append(chaine.charAt(i++));
+							sb.append(chaine.charAt(i));
 						}
 
 					}

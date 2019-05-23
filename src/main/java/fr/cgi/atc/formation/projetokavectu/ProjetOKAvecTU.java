@@ -2,21 +2,21 @@
  * ECM BTB - Equipe ECM - CGI 2015
  * 
  */
-package fr.cgi.atc.formation.projetkoavectu;
+package fr.cgi.atc.formation.projetokavectu;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.cgi.atc.formation.projetkoavectu.util.TransformationUtil;
+import fr.cgi.atc.formation.projetokavectu.util.TransformationUtil;
 
 /**
- * ProjetKOAvecTU.java DOCUMENTEZ_MOI
+ * ProjetOKAvecTU.java DOCUMENTEZ_MOI
  * 
  * @author viollinn Date: 30 oct. 2015
  */
-public class ProjetKOAvecTU {
+public class ProjetOKAvecTU {
 
-	private static final Logger LOG = LoggerFactory.getLogger(ProjetKOAvecTU.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ProjetOKAvecTU.class);
 
 	/**
 	 * 
@@ -26,7 +26,7 @@ public class ProjetKOAvecTU {
 	 */
 	public static void main(String args[]) {
 
-		ProjetKOAvecTU simpleTuProject = new ProjetKOAvecTU();
+		ProjetOKAvecTU simpleTuProject = new ProjetOKAvecTU();
 		simpleTuProject.traitement();
 	}
 
